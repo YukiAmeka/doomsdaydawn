@@ -1,0 +1,15 @@
+nav ul {
+    font-family: 'Acme', sans-serif;
+}
+
+.headings {
+    font-family: 'Acme', sans-serif;
+}
+
+.characters {
+    height: 250px;
+    border-radius: 50%;
+    border-color: brown;
+    border-width: 2px;
+    border-style: solid;
+}
