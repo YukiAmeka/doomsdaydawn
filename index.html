@@ -5,47 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Doomsday Dawn Playthrough</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#f4f0d3">
+    <meta name="theme-color" content="#f4f0d3">
+    <link rel="stylesheet" href="css/shared.css" type="text/css" />
     <link rel="stylesheet" href="css/index.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet"> 
 </head>
 <body>
-    <header>
-        <h1 class="headings">Doomsday Dawn Playthrough</h1>
+    <header class="shadow">
+        <h1 class="headings"><a href="index.html">Doomsday&nbsp;Dawn&nbsp;Playthrough</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cast.html">Cast</a></li>
+                <li><a href="npc.html">NPCs</a></li>
+                <li><a href="summaries.html">Session&nbsp;Summaries</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav id="main-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cast.html">Cast</a></li>
-            <li><a href="npc.html">NPCs</a></li>
-            <li><a href="summaries.html">Session Summaries</a></li>
-        </ul>
-    </nav>
-    <div id="premise">
-        <p>A lucky find in the sewers under the city of Magnimar reveals a terrible danger hanging over the people of Golarion. 
-        Thwarted at every corner by a powerful foe, members of a secret order race against the clock to prevent the doomsday...</p>
-    </div>
-    <img id="title-card" src="images/Title_card.png" alt="Title card of the Doomsday Dawn AP: Sourcerer and Ranger are fighting the undead">
-    <section id="recap">
-        <h3 class="headings">Latest Session Recap</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. 
-        Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, 
-        et lacinia ipsum quam nec dui...</p>
-        <a href="summaries.html#session-1">Read more</a>
-    </section>
-    <section id="player-char">
-        <h3 class="headings">Cast of the Adventure</h3>
-        <div>
-            <img class="characters" src="images/Isono_token.png" alt="Image of Isono - a young Oriental woman">
-            <h5>Sueno Isono</h5>
+    <main>
+        <div class="premise">
+            <img src="images/title_card.png" alt="Title card of the Doomsday Dawn AP: Sourcerer and Ranger are fighting the undead" class="shadow">
+            <p class="handwritten">A lucky find in the sewers under the city of Magnimar reveals a terrible danger hanging over the people of Golarion. 
+            Thwarted at every corner by a powerful foe, members of a secret order race against the clock to prevent the doomsday...</p>
         </div>
-    </section>
-    <section id="npc">
-        <h3 class="headings">Random NPC</h3>
-        <div>
-            <img class="characters" src="images/Keleri.png" alt="Image of Keleri - a young smiling red-headed woman">
-            <h5>Keleri Deverin</h5>
+        <section>
+            <h3 class="headings">Cast of the Adventure</h3>
+            <div class="index-pc">
+                <figure>
+                    <img class="characters" src="images/gunthar_token.png" alt="Image of Gunthar - an angry gnome">
+                    <figcaption class="handwritten">Gunthar</figcaption>
+                </figure>
+                <figure>
+                    <img class="characters" src="images/sator_token.png" alt="Image of Sator - a cleric of Sarenrae">
+                    <figcaption class="handwritten">Sator</figcaption>
+                </figure>
+                <figure>
+                    <img class="characters" src="images/druwits_token.png" alt="Image of Druwits - an elderly druid">
+                    <figcaption class="handwritten">Druwits</figcaption>
+                </figure>
+                <figure>
+                    <img class="characters" src="images/beithir.png" alt="Image of Beithir - a ferocious young bear">
+                    <figcaption class="handwritten">Beithir</figcaption>
+                </figure>
+            </div>
+        </section>
+        <hr>
+        <div class="game-info">
+            <section>
+                <h3 class="headings">Latest Session Recap</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. 
+                Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, 
+                et lacinia ipsum quam nec dui...</p>
+                <p class="link"><a href="summaries.html#session-1">Read more</a></p>
+            </section>
+            <section>
+                <h3 class="headings">Random NPC</h3>
+                <figure>
+                    <img class="characters" src="images/keleri.png" alt="Image of Keleri - a young smiling red-headed woman">
+                    <figcaption class="handwritten">Keleri Deverin</figcaption>
+                </figure>
+            </section>
         </div>
-    </section>
+        <hr>
+        <section class="contact">
+            <h3 class="headings">Contact the GM</h3>
+            <form class="shadow">
+                <label for="email">Your email:</label>
+                <input id="email" type="email" placeholder="Your email">
+                <label for="message">Your message:</label>
+                <textarea id="message" rows="3">Your message</textarea>
+                <input class="button" type="submit" value="Send">
+            </form>
+        </section>
+    </main>
     <footer>
         <p>© 2018 The playthrough is based on "Doomsday Dawn" AP, that is property of Paizo Publishing LLC. 
         The information collected on the web site is for use of players and is not meant to generate any profit. 
