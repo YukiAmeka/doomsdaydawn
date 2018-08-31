@@ -1,0 +1,26 @@
+main .summaries {
+    display: flex;
+}
+
+main .summaries aside {
+    flex: 0 0 auto;
+}
+
+main .summaries section {
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--pale-green-color);
+    border-width: 1px;
+    border-color: var(--purple-color);
+    border-style: solid;
+}
+
+@media (max-width: 730px){
+    main .summaries {
+        flex-wrap: wrap;
+    }
+}
+
+main .summaries aside ol li ul li a:hover {
+    color: var(--pale-green-color);
+}

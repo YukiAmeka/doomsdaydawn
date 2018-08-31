@@ -74,11 +74,11 @@
         <hr>
         <section class="contact">
             <h3 class="headings">Contact the GM</h3>
-            <form class="shadow">
+            <form id="contact-form" method="POST" action="https://formspree.io/anyalo307@gmail.com" class="shadow">
                 <label for="email">Your email:</label>
                 <input id="email" type="email" placeholder="Your email">
                 <label for="message">Your message:</label>
-                <textarea id="message" rows="3">Your message</textarea>
+                <textarea id="message" rows="3" name="message" form="contact-form"></textarea>
                 <input class="button" type="submit" value="Send">
             </form>
         </section>
