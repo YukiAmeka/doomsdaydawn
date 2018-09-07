@@ -54,7 +54,7 @@ main section figcaption {
 
 main .game-info {
     display: flex;
-    justify-items: space-between;
+    justify-content: space-between;
 }
 
 @media (max-width: 460px) {
