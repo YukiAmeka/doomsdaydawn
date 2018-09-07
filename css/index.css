@@ -16,9 +16,26 @@ main .premise p {
     color: var(--pale-green-color);
 }
 
+@media (max-width: 460px) {
+    main .premise p {
+        margin: 10px auto;
+        position: static;
+        width: 90%;
+        color: var(--purple-color);
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
 main section .index-pc {
     display: flex;
     justify-content: space-around;
+}
+
+@media (max-width: 460px) {
+    main section .index-pc {
+        flex-wrap: wrap;
+    }
 }
 
 main section figure {
@@ -40,9 +57,21 @@ main .game-info {
     justify-items: space-between;
 }
 
+@media (max-width: 460px) {
+    main .game-info {
+        flex-wrap: wrap;
+    }
+}
+
 main .game-info section {
     margin: 10px;
     flex-basis: 50%;
+}
+
+@media (max-width: 460px) {
+    main .game-info section {
+        flex-basis: 100%;
+    }
 }
 
 main .game-info section figure {
@@ -73,9 +102,28 @@ main .contact form {
     grid-gap: 5px 10px;
 }
 
+@media (max-width: 460px) {
+    main .contact form label {
+        display: none;
+    }
+}
+
+@media (max-width: 460px) {
+    main .contact form .email {
+        grid-column: 1 / 3;
+    }
+}
+
 main .contact form textarea {
     box-sizing: border-box;
     width: 100%;
+}
+
+@media (max-width: 460px) {
+    main .contact form textarea {
+        grid-column: 1 / 3;
+        justify-self: center;
+    }
 }
 
 main .contact form .button {
@@ -88,6 +136,13 @@ main .contact form .button {
     cursor: pointer;
     grid-column-start: 2;
     justify-self: end;
+}
+
+@media (max-width: 460px) {
+    main .contact form .button {
+        grid-column: 1 / 3;
+        justify-self: center;
+    }
 }
 
 main .contact form .button:hover {
