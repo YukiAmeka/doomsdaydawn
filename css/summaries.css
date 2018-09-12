@@ -15,10 +15,18 @@ main .summaries section {
     border-style: solid;
 }
 
+main .summaries section .summary-text {
+    display: none;
+}
+
 @media (max-width: 730px){
     main .summaries {
         flex-wrap: wrap;
     }
+}
+
+main .summaries aside ol .dropdown-btn .dropdown-container {
+    display: none;
 }
 
 main .summaries aside ol li ul li a:hover {

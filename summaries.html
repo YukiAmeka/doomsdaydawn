@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DDP: Session Summaries</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#f4f0d3">
+    <meta name="theme-color" content="#f4f0d3">
     <link rel="stylesheet" href="css/shared.css" type="text/css" />
     <link rel="stylesheet" href="css/summaries.css" type="text/css" />
 </head>
@@ -25,15 +32,15 @@
         <div class="summaries">
             <aside>
                 <ol>
-                    <li>The Lost Star<br>
-                        <ul>
-                            <li><a href=#>Session 1</a></li>
-                            <li><a href=#>Session 2</a></li>
-                            <li><a href=#>Session 3</a></li>
+                    <li class="dropdown-btn">The Lost Star<br>
+                        <ul class="dropdown-container">
+                            <li><a href=# name="session-1">Session 1</a></li>
+                            <li><a href=# name="session-2">Session 2</a></li>
+                            <li><a href=# name="session-3">Session 3</a></li>
                         </ul>
                     </li>
-                    <li>In Pale Mountain's Shadow<br>
-                        <ul>
+                    <li class="dropdown-btn">In Pale Mountain's Shadow<br>
+                        <ul class="dropdown-container">
                             <li><a href=#>Session 4</a></li>
                             <li><a href=#>Session 5</a></li>
                             <li><a href=#>Session 6</a></li>
@@ -42,13 +49,33 @@
                 </ol>
             </aside>
             <section>
-                <h4 class="headings">Session 2</h4>
-                <p id="session-2" class="handwritten">The initial success in the Ashen Ossuary embolden some members of the party but scare the others. Sator, Gunthar, and Druwits (with Beithir, of course) are the ones who decide to push forward.<br>
-                Upon their entry into Mudchewer Central, they quickly realise that they have company - a small group of goblins building a ten-foot tall statue. Once the goblins notice the party, they leave their task and attack.
-                Less violence-inclined party members try to parley, but the little creatures don't seem to speak Common. In the end, they have to be dispatched.<br>
-                The party passes entrances to three suspicious caves without entering and zero in on the steps towards what looks like a desecrated entry chamber at a shrine. In their eagerness, they sound goblins' crude alarm when they enter.<br>
-                As a cleric, Sator cannot let the filthiness of Lamashtu's curse stay. After channeling positive energy confirms the source to be inside the fountain, he dives in and grabs the statue. In the ensuing fight with two quasits,
-                he makes use of it as a hand-held battering tool, further enraging the demons. In the end, it almost costs him his life. Meanwhile, Gunthar has much luck in setting one of quasits on fire, while Druwits and Beithir make a few well-placed hits.</p>
+                <div id="session-1" class="summary-text">
+                    <h4 class="headings">Session 1</h4>
+                    <div class="handwritten">
+                        <p>When Keleri Deverin's celar is broken into, she seeks help from her childhood friend Gunthar and a group of strangers she finds in the temple. They agree to venture into the sewers and return her Star of Desna.</p>
+                        <p>Gunthar questions Talga - a small goblin, who has survived the attack, and she tells him that Drakus (who she believes to be a vampire) forces members of her tribe to rob longshanks (humans). After Sator heals her and offers her some water, she also draws a simplistic map of the sewers.</p>
+                        <p>A search of the celar reveals a mess, a hole in the wall and a dead goblin, who appears to have been beaten by his own comrades same as Talga. The party has a good rest and does some shopping in preparation for the trip.</p>
+                        <p>Thanks to the map and Martin's impecable sense of direction, the trip through the sewers is quick and effective. Before going into the enemy's liar, the party peeks outside, and Isono recognises the inn where she's been nearly been scammed. Thus, they know the part of the city they are currently in.</p>
+                        <p>Immediately upon entry to the Mudchewers' liar, the party is attacked by the foul smell of goblin rubish and a small ooze. The latter one doesn't even manage to land one hit before it's defeated, while the former one will undoubtedly haunt them for days.</p>
+                    </div>
+                </div>
+                <div id="session-2" class="summary-text">
+                    <h4 class="headings">Session 2</h4>
+                    <div class="handwritten">
+                        <p>The initial success in the Ashen Ossuary embolden some members of the party but scare the others. Sator, Gunthar, and Druwits (with Beithir, of course) are the ones who decide to push forward.</p>
+                        <p>Upon their entry into Mudchewer Central, they quickly realise that they have company - a small group of goblins building a ten-foot tall statue. Once the goblins notice the party, they leave their task and attack.
+                        Less violence-inclined party members try to parley, but the little creatures don't seem to speak Common. In the end, they have to be dispatched.</p>
+                        <p>The party passes entrances to three suspicious caves without entering and zero in on the steps towards what looks like a desecrated entry chamber at a shrine. In their eagerness, they sound goblins' crude alarm when they enter.</p>
+                        <p>As a cleric, Sator cannot let the filthiness of Lamashtu's curse stay. After channeling positive energy confirms the source to be inside the fountain, he dives in and grabs the statue. In the ensuing fight with two quasits,
+                        he makes use of it as a hand-held battering tool, further enraging the demons. In the end, it almost costs him his life. Meanwhile, Gunthar has much luck in setting one of quasits on fire, while Druwits and Beithir make a few well-placed hits.</p>
+                    </div>
+                </div>
+                <div id="session-3" class="summary-text">
+                    <h4 class="headings">Session 3</h4>
+                    <div class="handwritten">
+                        <p>Coming up...</p>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
@@ -57,5 +84,6 @@
         The information collected on the web site is for use of players and is not meant to generate any profit. 
         All images used are property of their respective owners.</p>
     </footer>
+    <script type="text/javascript" src="js/summaries.js"></script>
 </body>
 </html>
