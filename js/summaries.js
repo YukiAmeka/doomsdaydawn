@@ -19,3 +19,9 @@ function showSummary(e) {
     sumTextDiv.style.display = "block";
 }
 
+document.addEventListener('DOMContentLoaded', showLastSummary);
+
+function showLastSummary() {
+  const sumTextDiv = document.querySelector('main .summaries section .summary-text');
+  sumTextDiv.style.display = "block";
+}
