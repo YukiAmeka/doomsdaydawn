@@ -25,10 +25,27 @@ main .summaries section .summary-text {
     }
 }
 
-main .summaries aside ol .dropdown-btn .dropdown-container {
+main .summaries aside ul .dropdown-btn .dropdown-container {
     display: none;
 }
 
-main .summaries aside ol li ul li a:hover {
+main .summaries aside ul li {
+    list-style-type: none;
+}
+
+main .summaries aside ul li ul li {
+    list-style-type: circle;
+}
+
+main .summaries aside ul li i {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+main .summaries aside ul li:hover {
+    cursor: pointer;
     color: var(--pale-green-color);
 }

@@ -22,9 +22,33 @@ body {
 }
 
 header {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+header .title {
+    margin: 0;
+    padding: 0 10px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .title svg {
+    height: 80px;
+    width: 120px;
+    text-shadow: 2px 2px 5px;
+}
+
+header .title i {
+    font-size: 3em; 
+    color: var(--dark-red-color);
+}
+
+header .title i:hover {
+    cursor: pointer;
+    color: var(--pale-green-color);
 }
 
 header nav {

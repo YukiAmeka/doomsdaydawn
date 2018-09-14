@@ -1,4 +1,11 @@
-const sideMenuLink = document.querySelectorAll('main .summaries aside ol .dropdown-btn');
+document.addEventListener('DOMContentLoaded', showLastSummary);
+
+function showLastSummary() {
+  const sumTextDiv = document.querySelectorAll('main .summaries section .summary-text');
+  sumTextDiv[sumTextDiv.length-2].style.display = "block";
+}
+
+const sideMenuLink = document.querySelectorAll('main .summaries aside ul .dropdown-btn');
 sideMenuLink.forEach( el => el.addEventListener('click', dropdown));
 
 function dropdown(e) {
@@ -10,7 +17,7 @@ function dropdown(e) {
     }
 }
 
-const subMenuList = document.querySelectorAll('main .summaries aside ol li ul li a');
+const subMenuList = document.querySelectorAll('main .summaries aside ul li ul li a');
 subMenuList.forEach( el => el.addEventListener('click', showSummary));
 
 function showSummary(e) {
@@ -19,9 +26,3 @@ function showSummary(e) {
     sumTextDiv.style.display = "block";
 }
 
-document.addEventListener('DOMContentLoaded', showLastSummary);
-
-function showLastSummary() {
-  const sumTextDiv = document.querySelector('main .summaries section .summary-text');
-  sumTextDiv.style.display = "block";
-}
