@@ -19,7 +19,7 @@
 <body>
     <header class="shadow">
         <div class="title">
-            <svg>
+            <svg viewBox="0 0 120 80">
             <defs>
             <linearGradient id="grad1" x1="70%" y1="0%" x2="10%" y2="90%">
                 <stop offset="0%" style="stop-color:#FFC300;stop-opacity:1" />
@@ -31,7 +31,7 @@
             <text fill=#FFC300 font-size="30" x="15" y="50"></text>
             </svg>
             <h1 class="headings"><a href="index.html">Doomsday Dawn Playthrough</a></h1>
-            <i class="fas fa-info-circle"></i>
+            <i id="infoBtn" class="fas fa-info-circle"></i>
         </div>
         <nav>
             <ul>
@@ -70,6 +70,24 @@
         The information collected on the web site is for use of players and is not meant to generate any profit. 
         All images used are property of their respective owners.</p>
     </footer>
+    <div class="modal hide">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4 class="headings">Who are We?</h4>
+            <p>We are a small group of people who enjoy tabletop role-playing games.</p>
+            <h4 class="headings">What the Hell is a Tabletop Role-Playing Game?</h4>
+            <p>A tabletop role-playing game (TRPG) is a type of RPG where players participate in adventures through speech and imagination according to a set of rules.
+            A designated game master (GM) describes the setting and controls non-player characters (NPCs), while each of the other players controls a player character (PC) by acting out their actions.
+            The strength of tabletop RPGs is in the freedom of improvisation and potentially unlimited ability to shape outcomes. Additionally, it is a fun communal experience to share with friends.</p>
+            <p>For more information, please, look up the corresponding article on <a href="https://en.wikipedia.org/wiki/Tabletop_role-playing_game">Wikipedia</a> or a short and sweet intro on 
+            <a href="https://wiki.roll20.net/Introduction_To_Tabletop_RPGs">Roll20</a> - a dedicated online service for TRPG players.</p>
+            <h4 class="headings">So, What is This Website About?</h4>
+            <p>This website is dedicated to a particular campaign based on the "Doomsday Dawn" mini-adventure path published by Paizo Publishing LLC as part of the playtest of the upcoming Pathfinder 2 ruleset.
+            The aim of the playtest is to try out a new system and provide creators with feedback that will let them iron out the kinks for the final version, which is due to come out in the summer of 2019.
+            All of the relevant materials are available in pdf format free of charge on <a href="http://paizo.com/pathfinderplaytest">Paizo website</a>.</p>
+            <p>Although this website is intended for the use of players, feel free to browse and tell us what you think!</p>
+        </div>
+    </div>
     <script src="js/shared.js"></script>
 </body>
 </html>

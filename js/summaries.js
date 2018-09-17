@@ -1,28 +1,58 @@
-document.addEventListener('DOMContentLoaded', showLastSummary);
-
-function showLastSummary() {
-  const sumTextDiv = document.querySelectorAll('main .summaries section .summary-text');
-  sumTextDiv[sumTextDiv.length-2].style.display = "block";
-}
-
-const sideMenuLink = document.querySelectorAll('main .summaries aside ul .dropdown-btn');
-sideMenuLink.forEach( el => el.addEventListener('click', dropdown));
+window.addEventListener("load", getJsonDataOnLoad);
+document.querySelectorAll("main .summaries aside ul .summary-link")
+    .forEach( el => el.addEventListener("click", getJsonDataOnClick));
+document.querySelectorAll("main .summaries aside ul .dropdown-btn")
+    .forEach( el => el.addEventListener("click", dropdown));
 
 function dropdown(e) {
-    const submenu = e.target.querySelector('.dropdown-container');
-    if (submenu.style.display === "block") {
-      submenu.style.display = "none";
-    } else {
-      submenu.style.display = "block";
+   document.querySelector(".dropdown-container").classList.toggle("hide");
+}
+
+function getJsonDataOnLoad() {
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const summaryData = JSON.parse(xhr.responseText);
+            const lastSummary = summaryData.length-1;
+            const summaryEl = summaryData[lastSummary];
+            fillInSummary(summaryEl, lastSummary);
+        }
+        if (xhr.readyState === 4 && xhr.status !== 200 ) {
+            console.error('Error occured: ' + xhr.status);
+        }
+    }
+    xhr.open("GET", "summaries.json?r="+Math.random(), true);
+    xhr.send();
+}
+
+function getJsonDataOnClick(el) {
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const summaryData = JSON.parse(xhr.responseText);
+            const summaryId = el.target.innerText.slice(-1);
+            const summaryEl = getSummaryById(summaryData, summaryId);
+            summaryEl === undefined ? fillInSummary(summaryData[0], summaryId) : fillInSummary(summaryEl, summaryId);
+        }
+        if (xhr.readyState === 4 && xhr.status !== 200 ) {
+            console.error('Error occured: ' + xhr.status);
+        }
+    }
+    xhr.open("GET", "summaries.json?r="+Math.random(), true);
+    xhr.send();
+}
+
+function getSummaryById(array, passedId) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i].id === passedId) {
+            return array[i];
+        }
     }
 }
 
-const subMenuList = document.querySelectorAll('main .summaries aside ul li ul li a');
-subMenuList.forEach( el => el.addEventListener('click', showSummary));
-
-function showSummary(e) {
-    const sumTextId = '#' + e.target.name;
-    const sumTextDiv = document.querySelector(sumTextId);
-    sumTextDiv.style.display = "block";
+function fillInSummary(summary, passedId) {
+    document.querySelector("main .summaries section .summary-heading")
+        .innerText = "Summary of Session " + passedId;
+    document.querySelector("main .summaries section .summary-text")
+        .innerText = summary.descrip;
 }
-

@@ -7,6 +7,7 @@ main .summaries aside {
 }
 
 main .summaries section {
+    width: 100%;
     margin: 10px;
     padding: 20px;
     background-color: var(--pale-green-color);
@@ -15,18 +16,10 @@ main .summaries section {
     border-style: solid;
 }
 
-main .summaries section .summary-text {
-    display: none;
-}
-
 @media (max-width: 730px){
     main .summaries {
         flex-wrap: wrap;
     }
-}
-
-main .summaries aside ul .dropdown-btn .dropdown-container {
-    display: none;
 }
 
 main .summaries aside ul li {
@@ -45,7 +38,8 @@ main .summaries aside ul li i {
     transform: rotate(45deg);
 }
 
-main .summaries aside ul li:hover {
+main .summaries aside ul .dropdown-btn:hover,
+main .summaries aside ul .summary-link:hover{
     cursor: pointer;
     color: var(--pale-green-color);
 }
